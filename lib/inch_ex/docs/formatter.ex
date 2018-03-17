@@ -73,7 +73,7 @@ defmodule InchEx.Docs.Formatter do
   end
 
   defp save_as_json(output, data) do
-    json = Poison.Encoder.encode(data, [])
+    {:ok, json} = JSON.encode(data)
     :ok = File.write("#{output}/all.json", json)
   end
 

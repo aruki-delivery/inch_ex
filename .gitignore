@@ -4,3 +4,6 @@
 test.json
 erl_crash.dump
 *.ez
+/out
+out
+docs/all.json

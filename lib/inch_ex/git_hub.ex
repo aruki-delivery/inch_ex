@@ -14,7 +14,7 @@ defmodule InchEx.GitHub do
   defp github_repo_info(nwo) do
     case :httpc.request(:get, {'https://api.github.com/repos/#{nwo}', [{'User-Agent', 'inch_ex'}]}, [], []) do
       {:ok, {_, _, body}} ->
-        {:ok, Poison.decode!(body)}
+        {:ok, JSON.decode!(body)}
       _ -> {:error}
     end
   end

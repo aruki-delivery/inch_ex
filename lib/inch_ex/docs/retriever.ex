@@ -130,7 +130,7 @@ defmodule InchEx.Docs.Retriever do
 
   # Skip default docs if starting with _
   defp has_doc?({{name, _}, _, _, _, nil}, _type) do
-    hd(Atom.to_char_list(name)) != ?_
+    hd(Atom.to_charlist(name)) != ?_
   end
 
   # Everything else is ok

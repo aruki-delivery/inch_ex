@@ -37,8 +37,8 @@ defmodule InchEx.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:poison, "~> 1.5 or ~> 2.0 or ~> 3.0"},
-      {:credo, "~> 0.4", only: :dev}
+      {:json, "~> 1.0"},
+      {:credo, github: "cblage/credo", branch: "master", only: :dev}
     ]
   end
 end
